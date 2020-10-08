@@ -1,0 +1,12 @@
+body {
+  font-family: Palatino;
+}
+
+ul {
+  display: flex;
+}
+
+ul > li {
+  text-decoration: none;
+  
+}
