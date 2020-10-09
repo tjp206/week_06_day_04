@@ -8,7 +8,7 @@ const createReadingListItem = function (event) {
     const category = event.target.category.value;
 
   const newReadListItem = document.createElement('li');
-    newReadListItem.textContent = `${title} ${author} ${category}`;
+    newReadListItem.textContent = `Title: ${title} Author: ${author} Category: ${category}`;
     const list = document.querySelector('ul'); 
     list.appendChild(newReadListItem);
 }
