@@ -2,28 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript loaded');
 
 const createReadingListItem = function (event) {
-    // // separate the input data into variables.
+    // separate the input data into variables below
     const title = event.target.title.value;
     const author = event.target.author.value;
     const category = event.target.category.value;
 
   const newReadListItem = document.createElement('li');
     newReadListItem.textContent = `${title} ${author} ${category}`;
-    // newReadListItem.classList.add('');
-    const list = document.querySelector('ul');
+    const list = document.querySelector('ul'); 
     list.appendChild(newReadListItem);
 }
 
 // handle form submit for form const below.#new
   const handleFormSubmit = function (event) {
-    // prevent POST request
-    event.preventDefault();
-    // create reading list item
-    createReadingListItem(event);
-    // clear the form
-    event.target.title.value = '';
-    event.target.author.value = '';
-    event.target.category.value = '';
+    event.preventDefault(); // prevent POST request
+    createReadingListItem(event); // create reading list item
+    event.target.title.value = ''; // clear the form
+    event.target.author.value = ''; // clear the form
+    event.target.category.value = ''; // clear the form
   } 
 
   const form = document.querySelector("#new-item-form");
